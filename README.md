@@ -18,7 +18,7 @@ use pocketmine\plugin\Plugin;
 class FormAddon extends Addon implements Listener {
 
     public function __construct() {
-        parent::__construct("FormAddon", "1.0.0", "phuongaz", "FormAddon for OpenSkyBlock");
+        parent::__construct("FormAddon", "1.0.0", "phuongaz", "Test Addon Form");
     }
 
     public function execute(Plugin $plugin) : void {
