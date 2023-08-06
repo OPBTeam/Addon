@@ -2,6 +2,19 @@
 
 Create simple addons for plugins.
 
+# Usage
+Load addons from `path/to/plugin/addons`
+```php
+use AddonTrait;
+
+public function onEnable() :void {
+    self::initAddon($this, $this->getDataFolder() . "addons");
+}
+
+public function getAddons() :array {
+    return self::getAddons();
+}
+```
 ## Simple Addon
 ```php
 <?php
@@ -52,7 +65,7 @@ class FormAddon extends Addon implements Listener {
 }
 ```
 
-## Simple Trait
+## Create Simple Trait
 ```php
 <?php
 
@@ -82,17 +95,5 @@ trait AddonTrait {
     public static function getAddons() :array {
         return self::$addon->getAddons();
     }
-}
-```
-
-```php
-use AddonTrait;
-
-public function onEnable() :void {
-    self::initAddon($this, $this->getDataFolder() . "addons");
-}
-
-public function getAddons() :array {
-    return self::getAddons();
 }
 ```
